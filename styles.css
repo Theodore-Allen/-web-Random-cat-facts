@@ -5,6 +5,7 @@
 }
 body {
   background-color: blueviolet;
+  overflow-x: hidden;
 }
 .cat-container {
   margin-top: 20px;
