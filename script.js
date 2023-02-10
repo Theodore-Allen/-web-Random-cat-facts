@@ -22,6 +22,7 @@ async function catFact() {
 catPic();
 catFact();
 factBtn.addEventListener('click', () => {
+  catSound.playbackRate  = 1.5;
   catSound.play();
   catPic();
   catFact();
