@@ -10,18 +10,16 @@ body {
   margin-top: 20px;
 }
 .fact-container {
-  
-
 }
-.fact-container h3
-{
+.fact-container h3 {
   padding: 10px;
-  
-  overflow-wrap:break-word;
+
+  overflow-wrap: break-word;
   text-align: center;
   font-size: 30px;
 }
 .img-container {
+  box-shadow: 0 0 10px white;
   position: relative;
   height: 400px;
   width: 50vw;
@@ -36,7 +34,7 @@ body {
   position: relative;
   height: 100px;
   width: 55vw;
-  margin-left:50%;
+  margin-left: 50%;
   left: -27.5vw;
   border-radius: 10px;
   border: none;
@@ -44,14 +42,13 @@ body {
   color: blueviolet;
   background-color: white;
 }
-#hart{
+#hart {
   position: relative;
   margin-top: 200px;
   margin-left: 50%;
   left: -70px;
   top: -32px;
 }
-.hide
-{
+.hide {
   display: none;
 }
