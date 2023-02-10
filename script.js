@@ -2,6 +2,7 @@ const factBtn = document.getElementById('factBtn');
 const factTxt = document.getElementById('factTxt');
 const catImg = document.getElementById('img');
 const hart = document.getElementById('hart');
+const catSound = new Audio('')
 const body = document.getElementsByName('body');
 async function catPic() {
   hart.classList.remove('hide');
@@ -22,7 +23,6 @@ catFact();
 factBtn.addEventListener('click', () => {
   catPic();
   catFact();
-  
 });
 catImg.onload = function () {
   console.log('done');
