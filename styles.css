@@ -42,6 +42,7 @@ body {
   font-size: 2rem;
   color: blueviolet;
   background-color: white;
+  margin-bottom: 20px;
 }
 #hart {
   position: relative;
@@ -56,4 +57,19 @@ body {
 h1 {
   text-align: center;
   font-size: 2.2rem;
+}
+footer {
+  background-color: rgb(125, 46, 199);
+}
+footer #author {
+  padding-right: 10px;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: right;
+}
+footer #author:hover {
+  padding: 0;
+  padding-right: 10px;
+  font-size: 25px;
 }
