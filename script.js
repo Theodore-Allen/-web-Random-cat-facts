@@ -11,6 +11,7 @@ async function catPic() {
   const response = await server.json();
   
   catImg.style.backgroundImage = `url(${response[0].url})`;
+  console.log(response)
   await re();
 }
 async function catFact() {
