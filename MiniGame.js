@@ -1,4 +1,5 @@
 const catImg = document.getElementById('img');
+const optionContainer = document.getElementById('q-container')
 const optionAmount = 4;
 app();
 async function app() {
@@ -13,12 +14,13 @@ async function app() {
        
         tempCat.push({name: e[i].breeds[0].name, id: e[i].id, url: e[i].url })
       }
-      console.log(tempCat)
 
     })
   );
 }
 
+
+// pulls the cat id and img url from the api
 async function getCatArray() {
   const endpoint =
     'https://api.thecatapi.com/v1/images/search?limit=10&has_breeds=1';
@@ -28,6 +30,8 @@ async function getCatArray() {
   return response;
 }
 
+
+// runs the id back threw the api to get everything about the cat like the breed 
 async function id2CatInfo(id) {
   var cats = [];
   for (var i = 0; i < optionAmount; i++) {
