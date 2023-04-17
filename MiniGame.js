@@ -33,17 +33,18 @@ async function getCatArray() {
 }
 function gameStart(catsArray) {
   var tempRand = RandomInt(0, optionAmount);
-  answerNumber = tempRand;
+  answer = tempRand;
+ 
   console.log(tempRand);
 
-  catImg.style.backgroundImage = `url(${catsArray[rand].url})`;
-  console.log(catImg);
+  catImg.style.backgroundImage = `url(${catsArray[tempRand].url})`;
 
   for (var i = 0; i < optionAmount; i++) {
     const button = document.createElement('button');
+   
     button.innerText = catsArray[i].name;
     button.setAttribute('index', i);
-      
+    
     optionContainer.append(button);
   }
 }

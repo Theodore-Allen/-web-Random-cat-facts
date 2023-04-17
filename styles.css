@@ -73,19 +73,18 @@ footer #author:hover {
   padding-right: 10px;
   font-size: 25px;
 }
-.miniGameBtn
-{
+.miniGameBtn {
   position: fixed;
-   height: 170px;
-   width: 100px;
-   border-radius: 10px;
-   background-color: transparent;
-   text-shadow: 2px 1px 2px black;
-   left: 5px;
-   border: 2px solid white;
+  height: 170px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: transparent;
+  text-shadow: 2px 1px 2px black;
+  left: 5px;
+  border: 2px solid white;
 }
 
-body{
+body {
   background: linear-gradient(102deg, #0005ff, #d100ff, #ff00a7);
   background-size: 600% 600%;
 
@@ -95,22 +94,47 @@ body{
 }
 
 @-webkit-keyframes AnimationName {
-  0%{background-position:72% 0%}
-  50%{background-position:29% 100%}
-  100%{background-position:72% 0%}
+  0% {
+    background-position: 72% 0%;
+  }
+  50% {
+    background-position: 29% 100%;
+  }
+  100% {
+    background-position: 72% 0%;
+  }
 }
 @-moz-keyframes AnimationName {
-  0%{background-position:72% 0%}
-  50%{background-position:29% 100%}
-  100%{background-position:72% 0%}
+  0% {
+    background-position: 72% 0%;
+  }
+  50% {
+    background-position: 29% 100%;
+  }
+  100% {
+    background-position: 72% 0%;
+  }
 }
 @keyframes AnimationName {
-  0%{background-position:72% 0%}
-  50%{background-position:29% 100%}
-  100%{background-position:72% 0%}
+  0% {
+    background-position: 72% 0%;
+  }
+  50% {
+    background-position: 29% 100%;
+  }
+  100% {
+    background-position: 72% 0%;
+  }
 }
-.q-container
-{
+#q-container {
   display: flex;
-  flex: 1 2;
+  flex: 1 1 1 1;
+  align-items: center;
+
+}
+#q-container button {
+  
+  background: transparent;
+  /* width: 200px;*/
+   height: 50px;
 }
