@@ -32,18 +32,23 @@ async function getCatArray() {
   return response;
 }
 function gameStart(catsArray) {
+  
+  optionContainer.innerHTML = "";
+
   var tempRand = RandomInt(0, optionAmount);
   answer = tempRand;
  
-  console.log(tempRand);
 
   catImg.style.backgroundImage = `url(${catsArray[tempRand].url})`;
 
+  // making the optionsBTNS for each cat
   for (var i = 0; i < optionAmount; i++) {
     const button = document.createElement('button');
    
     button.innerText = catsArray[i].name;
     button.setAttribute('index', i);
+    button.addEventListener('click', e => answerCheck( button.getAttribute('index')))
+  
     
     optionContainer.append(button);
   }
@@ -61,10 +66,25 @@ async function id2CatInfo(id) {
 
   return cats;
 }
+//returns a random int number
 function RandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min);
 }
+
+function answerCheck( index )
+{
+  console.log(index)
+  if(index == answer)
+  {
+    console.log('you won')
+  }
+  else
+  {
+    console.log('you lose');
+  }
+ app()
+} 
 //Api's used
 // https://thecatapi.com/

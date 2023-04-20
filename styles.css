@@ -73,16 +73,7 @@ footer #author:hover {
   padding-right: 10px;
   font-size: 25px;
 }
-.miniGameBtn {
-  position: fixed;
-  height: 170px;
-  width: 100px;
-  border-radius: 10px;
-  background-color: transparent;
-  text-shadow: 2px 1px 2px black;
-  left: 5px;
-  border: 2px solid white;
-}
+
 
 body {
   background: linear-gradient(102deg, #0005ff, #d100ff, #ff00a7);
@@ -128,13 +119,17 @@ body {
 }
 #q-container {
   display: flex;
-  flex: 1 1 1 1;
-  align-items: center;
+
 
 }
 #q-container button {
   
   background: transparent;
-  /* width: 200px;*/
-   height: 50px;
+    font-size: larger;
+   padding: 20px 10px;
+   border: 2px solid white;
+   border-radius: 10px;
+   background-color: transparent;
+   text-shadow: 2px 1px 2px black;
+
 }
