@@ -1,11 +1,16 @@
 const catImg = document.getElementById('img');
+const loadingObj = document.getElementById('loading');
 const optionContainer = document.getElementById('q-container');
-const optionAmount = 4;
 
+
+//game variable
+const optionAmount = 5; // ten is the max but its really slow to load
 let answer;
+let score;
 
 app();
 async function app() {
+  loading(true);
   getCatArray().then((e) =>
     id2CatInfo(
       e.map((e) => {
@@ -22,6 +27,7 @@ async function app() {
   );
 }
 
+
 // pulls the cat id and img url from the api
 async function getCatArray() {
   const endpoint =
@@ -31,26 +37,37 @@ async function getCatArray() {
 
   return response;
 }
+
 function gameStart(catsArray) {
-  
-  optionContainer.innerHTML = "";
+  optionContainer.innerHTML = '';
 
   var tempRand = RandomInt(0, optionAmount);
   answer = tempRand;
- 
 
   catImg.style.backgroundImage = `url(${catsArray[tempRand].url})`;
 
   // making the optionsBTNS for each cat
   for (var i = 0; i < optionAmount; i++) {
     const button = document.createElement('button');
-   
+
     button.innerText = catsArray[i].name;
     button.setAttribute('index', i);
-    button.addEventListener('click', e => answerCheck( button.getAttribute('index')))
-  
-    
+    button.addEventListener('click', (e) =>
+      answerCheck(button.getAttribute('index'))
+    );
+
     optionContainer.append(button);
+  }
+
+
+  if (document.readyState === 'ready' || document.readyState === 'complete') {
+    loading(false);
+  } else {
+    document.onreadystatechange = function () {
+      if (document.readyState == 'complete') {
+        loading(false);
+      }
+    };
   }
 }
 
@@ -73,18 +90,22 @@ function RandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-function answerCheck( index )
-{
-  console.log(index)
-  if(index == answer)
-  {
-    console.log('you won')
-  }
-  else
-  {
+function answerCheck(index) {
+  console.log(index);
+  if (index == answer) {
+    console.log('you won');
+
+  } else {
     console.log('you lose');
   }
- app()
-} 
+  app();
+}
+function loading(bool) {
+  if (bool === true) {
+    loadingObj.classList.remove('hide');
+  } else {
+    loadingObj.classList.add('hide');
+  }
+}
 //Api's used
 // https://thecatapi.com/
