@@ -6,7 +6,7 @@ const WLPageTxt = document.getElementById('WLPage-word');
 const WLPageBtn = document.getElementById('nextCatBtn');
 
 //game variable
-const optionAmount = 3; // ten is the max but its really slow to load
+const optionAmount = 4; // ten is the max but its really slow to load
 let answer;
 let score;
 
@@ -100,10 +100,12 @@ function answerCheck(index) {
   console.log(index);
   if (index == answer) {
     console.log('you won');
+    OpenWLPage(1);
   } else {
     console.log('you lose');
+    OpenWLPage(0);
   }
-  OpenWLPage(0);
+
   // app();
 }
 function loading(bool) {
@@ -116,12 +118,16 @@ function loading(bool) {
 }
 // 0 lost 1 Win
 function OpenWLPage(WL) {
-  console.log(WLPage.tagName);
+  let rand = RandomInt(0, 1);
+  let win = ['you won', 'great job'];
+  let lose = ['youre trash', 'you lost'];
 
   if (WL == 0) {
     // loosing
+    WLPageTxt.innerText = lose[rand];
   } else {
     //winning
+    WLPageTxt.innerText = win[rand];
   }
 
   catImg.style.background = 'none';
