@@ -1,10 +1,11 @@
 const catImg = document.getElementById('img');
 const loadingObj = document.getElementById('loading');
 const optionContainer = document.getElementById('q-container');
+const WLPage = document.getElementById('WLPage');
 
 
 //game variable
-const optionAmount = 5; // ten is the max but its really slow to load
+const optionAmount = 3; // ten is the max but its really slow to load
 let answer;
 let score;
 
@@ -27,6 +28,10 @@ async function app() {
   );
 }
 
+
+//event listenser
+
+//functions
 
 // pulls the cat id and img url from the api
 async function getCatArray() {
@@ -98,6 +103,7 @@ function answerCheck(index) {
   } else {
     console.log('you lose');
   }
+  OpenWLPage(0)
   app();
 }
 function loading(bool) {
@@ -106,6 +112,26 @@ function loading(bool) {
   } else {
     loadingObj.classList.add('hide');
   }
+}
+// 0 lost 1 Win
+function OpenWLPage(WL)
+{
+
+
+
+  if(WL == 0)
+  {
+    // loosing 
+
+
+  }
+  else
+  {
+    //winning 
+
+
+  }
+catImg.style.background = 'none';
 }
 //Api's used
 // https://thecatapi.com/

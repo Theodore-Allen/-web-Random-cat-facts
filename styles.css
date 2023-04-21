@@ -8,6 +8,7 @@ body {
   overflow-x: hidden;
 }
 .cat-container {
+  
   margin-top: 20px;
 }
 .fact-container {
@@ -18,6 +19,11 @@ body {
   overflow-wrap: break-word;
   text-align: center;
   font-size: 30px;
+}
+.remove-img
+{
+  box-shadow: 0;
+  background-image: none;
 }
 .img-container {
   box-shadow: 0 0 10px white;
@@ -143,16 +149,23 @@ button {
   z-index: 2;
 }
 #WLPage {
-
+ display: none;
+  animation: pulse 1000ms;
   position: absolute;
   text-align: center;
   top: 25vh;
   width: 100%;
   height: 100%;
   z-index: 2;
+ 
 }
-#WLPage
-{
 
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.4;
+  }
 }
-@ani  
