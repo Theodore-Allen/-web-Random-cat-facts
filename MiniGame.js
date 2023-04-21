@@ -2,7 +2,8 @@ const catImg = document.getElementById('img');
 const loadingObj = document.getElementById('loading');
 const optionContainer = document.getElementById('q-container');
 const WLPage = document.getElementById('WLPage');
-
+const WLPageTxt = document.getElementById('WLPage-word');
+const WLPageBtn = document.getElementById('nextCatBtn');
 
 //game variable
 const optionAmount = 3; // ten is the max but its really slow to load
@@ -28,9 +29,10 @@ async function app() {
   );
 }
 
-
 //event listenser
-
+WLPageBtn.addEventListener('click', () => {
+  app();
+});
 //functions
 
 // pulls the cat id and img url from the api
@@ -63,7 +65,6 @@ function gameStart(catsArray) {
 
     optionContainer.append(button);
   }
-
 
   if (document.readyState === 'ready' || document.readyState === 'complete') {
     loading(false);
@@ -99,14 +100,14 @@ function answerCheck(index) {
   console.log(index);
   if (index == answer) {
     console.log('you won');
-
   } else {
     console.log('you lose');
   }
-  OpenWLPage(0)
+  OpenWLPage(0);
   // app();
 }
 function loading(bool) {
+  WLPage.style.display = 'none';
   if (bool === true) {
     loadingObj.classList.remove('hide');
   } else {
@@ -114,28 +115,19 @@ function loading(bool) {
   }
 }
 // 0 lost 1 Win
-function OpenWLPage(WL)
-{
+function OpenWLPage(WL) {
+  console.log(WLPage.tagName);
 
-console.log(WLPage.C[0].tagName)
-
-  if(WL == 0)
-  {
-    // loosing 
-
-
-  }
-  else
-  {
-    //winning 
-
-
+  if (WL == 0) {
+    // loosing
+  } else {
+    //winning
   }
 
-catImg.style.background = 'none';
-catImg.style.boxShadow = 'none';
+  catImg.style.background = 'none';
+  catImg.style.boxShadow = 'none';
 
-WLPage.style.display = 'block';
+  WLPage.style.display = 'block';
 }
 //Api's used
 // https://thecatapi.com/
