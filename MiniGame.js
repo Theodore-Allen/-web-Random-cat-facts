@@ -118,7 +118,8 @@ function loading(bool) {
 }
 // 0 lost 1 Win
 function OpenWLPage(WL) {
-  let rand = RandomInt(0, 1);
+  let rand = RandomInt(0, 2);
+  console.log(rand);
   let win = ['you won', 'great job'];
   let lose = ['youre trash', 'you lost'];
 
