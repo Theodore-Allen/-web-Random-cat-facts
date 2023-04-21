@@ -28,7 +28,7 @@ body {
 .img-container {
   box-shadow: 0 0 10px white;
   position: relative;
-  height: 400px;
+  height: 60vh;
   width: 50vw;
   margin-left: 50%;
   left: -25vw;
@@ -158,6 +158,14 @@ button {
   height: 100%;
   z-index: 2;
  
+}
+#WLPage h1{
+  font-size: 50px;
+}
+#WLPage button
+{
+  
+  margin-top: 50px;
 }
 
 @keyframes pulse {
