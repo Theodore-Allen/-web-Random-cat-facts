@@ -104,7 +104,7 @@ function answerCheck(index) {
     console.log('you lose');
   }
   OpenWLPage(0)
-  app();
+  // app();
 }
 function loading(bool) {
   if (bool === true) {
@@ -117,7 +117,7 @@ function loading(bool) {
 function OpenWLPage(WL)
 {
 
-
+console.log(WLPage.C[0].tagName)
 
   if(WL == 0)
   {
@@ -131,7 +131,11 @@ function OpenWLPage(WL)
 
 
   }
+
 catImg.style.background = 'none';
+catImg.style.boxShadow = 'none';
+
+WLPage.style.display = 'block';
 }
 //Api's used
 // https://thecatapi.com/
