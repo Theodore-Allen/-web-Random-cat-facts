@@ -6,7 +6,7 @@ const WLPageTxt = document.getElementById('WLPage-word');
 const WLPageBtn = document.getElementById('nextCatBtn');
 
 //game variable
-const optionAmount = 4; // ten is the max but its really slow to load
+const optionAmount = 5; // ten is the max but its really slow to load
 let answer;
 let score;
 
@@ -118,17 +118,102 @@ function loading(bool) {
 }
 // 0 lost 1 Win
 function OpenWLPage(WL) {
-  let rand = RandomInt(0, 2);
-  console.log(rand);
-  let win = ['you won', 'great job'];
-  let lose = ['youre trash', 'you lost'];
+  let win = [
+    'you won',
+    'great job',
+    'winner winner chicken dinner',
+    'you deserve a gold star',
+    'catastic',
+    'cat novice',
+    'IDk what your doing but keep it up',
+    'WOw you know your cats',
+    'You got this!',
+    'Believe in yourself!',
+    'Keep pushing forward!',
+    "You're making progress!",
+    "You're amazing!",
+    'You can do it!',
+    "Don't give up!",
+    'Stay positive!',
+    "You're stronger than you know!",
+    "You're capable of great things!",
+    "Don't be afraid to try!",
+    'Take it one step at a time!',
+    "You're on the right track!",
+    'Keep up the good work!',
+    "You're doing great!",
+    'Never stop learning!',
+    "You're a champion!",
+    'Keep chasing your dreams!',
+    "You're an inspiration!",
+    "You're making a difference!",
+    'Stay focused and determined!',
+    "You're destined for greatness!",
+    "You're capable of anything!",
+    "Don't let setbacks hold you back!",
+    "You're a problem solver!",
+    "You're full of potential!",
+    "You're a fighter!",
+    'Believe in your abilities!',
+    'Stay motivated!',
+    "You're unique and special!",
+    "You're a winner!",
+    'Stay true to yourself!',
+    "You're doing better than you think!",
+    "You're making an impact!",
+    "You're going places!",
+    'Keep aiming higher!',
+    "You're a valuable asset!",
+    'Keep your head up!',
+    "You're a leader!",
+    "You're a go-getter!",
+    'Stay persistent!',
+    "You're a role model!",
+    "You're a problem solver!",
+    "You're destined for success!",
+    'Stay committed to your goals!',
+    "You're an overcomer!",
+    'Keep the faith!',
+    "You're a creative genius!",
+    "You're a visionary!",
+    "You're a game-changer!",
+    'Stay hungry for success!',
+    "You're an innovator!",
+    "You're a trailblazer!",
+    "You're a force to be reckoned with!",
+    'Stay fearless!',
+    "You're a master of your craft!",
+    "You're a true professional!",
+    "You're an expert!",
+    'Stay disciplined!',
+    "You're a rising star!",
+    "You're a miracle worker!",
+    "You're a miracle in progress!",
+    "You're making your mark!",
+    'Stay hungry, stay foolish!',
+    "You're a future billionaire!",
+    "You're a genius in the making!",
+    "You're a trendsetter!",
+    'Stay hungry, stay foolish!',
+    "You're a future Nobel Prize winner!",
+    "You're a future world leader!",
+    'Stay curious!',
+  ];
+  let lose = [
+    "you're trash",
+    'you lost',
+    'better luck next time',
+    'it must have been a wall',
+    'you probaly couldnt see the cat right, right?',
+    "you can't be this bad",
+  ];
 
   if (WL == 0) {
     // loosing
-    WLPageTxt.innerText = lose[rand];
+    WLPageTxt.innerText = lose[RandomInt(0, lose.length)];
   } else {
     //winning
-    WLPageTxt.innerText = win[rand];
+    WLPageTxt.innerText = win[RandomInt(0, win.length)];
   }
 
   catImg.style.background = 'none';
